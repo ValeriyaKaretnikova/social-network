@@ -32,7 +32,53 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "n c";
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 2fr 10fr;
+  gap: 10px;
+  font-family: 'Raleway', sans-serif;
+  margin: 0 auto;
+  background-color: #E5E5E5;
+}
+
+.header {
+  grid-area: h;
+  background-color: #1A1A1A;
+}
+
+
+.header img {
+  width: 100px;
+}
+
+.nav {
+  grid-area: n;
+  background-color: #1A1A1A;
+}
+
+.nav a {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.nav a:hover{
+  color: #F15543;
+}
+
+.content {
+  grid-area: c;
+  background-color: #FFFFFF;
+}
+.content img {
+  width: 1200px;
 }
