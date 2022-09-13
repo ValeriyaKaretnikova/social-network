@@ -1,0 +1,19 @@
+.nav {
+  grid-area: n;
+  background-color: #1A1A1A;
+}
+
+.item {
+  color: #E5E5E5;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.item.active {
+  color: gold;
+}
+
+.item:hover {
+  color: #F15543;
+}
+
