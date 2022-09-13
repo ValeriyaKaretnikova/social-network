@@ -2,11 +2,7 @@
   grid-area: c;
   background-color: #FFFFFF;
 }
-
 .content img {
   width: 1200px;
 }
 
-.item {
-  color: green;
-}

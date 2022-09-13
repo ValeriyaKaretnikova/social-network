@@ -1,12 +1,15 @@
 .nav {
   grid-area: n;
   background-color: #1A1A1A;
+  padding: 20px
 }
 
 .item {
   color: #E5E5E5;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
+  margin: 20px 0;
+  display: block;
 }
 
 .item.active {
