@@ -4,7 +4,7 @@
   padding: 20px
 }
 
-.item {
+.item a{
   color: #E5E5E5;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
@@ -12,11 +12,11 @@
   display: block;
 }
 
-.item.active {
+.item a.active {
   color: gold;
 }
 
-.item:hover {
+.item a:hover {
   color: #F15543;
 }
 

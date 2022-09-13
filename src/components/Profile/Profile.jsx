@@ -3,7 +3,7 @@ import s from "./Profile.module.css";
 
 const Profile = () => {
   return (
-    <div className={s.content}>
+    <div className={s.profile}>
       <div>
         <img src={require("../../img/background.jpg")} alt="background car" />
       </div>
