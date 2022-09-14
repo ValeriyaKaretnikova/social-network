@@ -1,13 +1,11 @@
 import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.css";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
   return (
     <div className={s.profile}>
-      <div>
-        <img src={require("../../img/background.jpg")} alt="background car" />
-      </div>
-      <div>ava + descr</div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   );
