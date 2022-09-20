@@ -65,6 +65,7 @@ let store = {
           name: "Dima",
         },
       ],
+      newMessageText: "",
     },
     sidebar: {
       friends: [
@@ -106,7 +107,7 @@ let store = {
     this._callSubscriber = observer;
   },
   dispatch(action) {
-    if (action.type === "ADD-POST") {
+    if (action.type === ADD_POST) {
       const newPost = {
         id: 5,
         message: this._state.profilePage.newPostText,
@@ -115,11 +116,40 @@ let store = {
       this._state.profilePage.posts.push(newPost);
       this._state.profilePage.newPostText = "";
       this._callSubscriber(this._state);
-    } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
       this._state.profilePage.newPostText = action.newText;
+      this._callSubscriber(this._state);
+    } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
+      this._state.dialogsPage.newMessageText = action.newText;
+      this._callSubscriber(this._state);
+    } else if (action.type === SEND_MESSAGE) {
+      const body = this._state.dialogsPage.newMessageText;
+      this._state.dialogsPage.newMessageText = "";
+      const newMessage = {
+        id: 6,
+        message: body,
+      };
+      this._state.dialogsPage.messages.push(newMessage);
       this._callSubscriber(this._state);
     }
   },
 };
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
+const SEND_MESSAGE = "SEND-MESSAGE";
+
+export const addPostCreator = () => ({ type: ADD_POST });
+
+export const updateNewPostCreator = (text) => ({
+  type: UPDATE_NEW_POST_TEXT,
+  newText: text,
+});
+
+export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
+export const updateNewMessageCreator = (text) => ({
+  type: UPDATE_NEW_MESSAGE_TEXT,
+  newText: text,
+});
 
 export default store;
