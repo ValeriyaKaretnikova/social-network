@@ -5,3 +5,9 @@
 img {
     width: 1200px;
 }
+.background {
+    background: url('../../../img/background.jpg');
+    background-size:cover;
+    background-position:center;
+    height: 300px;
+}
