@@ -42,6 +42,42 @@
   padding: 10px;
 }
 
-.messages .message {
+.messages .message,
+.newMessageArea {
   margin: 20px;
+}
+
+.newMessageArea textarea {
+  width: 500px;
+  height: 100px;
+  border: none;
+  box-shadow: #daa520b3 0px 0px 0px 3px;
+  margin-bottom: 20px;
+  resize: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 5px 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.newMessageArea textarea:focus {
+  outline: none;
+}
+
+.newMessageArea button {
+  background-color: #f8bc24;
+  color: #FFFFFF;
+  border: none;
+  width: 150px;
+  height: 50px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.newMessageArea button:hover {
+  background-color: #daa520;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
