@@ -11,11 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 let renderEntireTree = (state) =>
   root.render(
     <BrowserRouter>
-      <App
-        state={state}
-        addPost={store.addPost.bind(store)}
-        updatePost={store.updateNewPostText.bind(store)}
-      />
+      <App state={state} dispatch={store.dispatch.bind(store)} />
     </BrowserRouter>
   );
 

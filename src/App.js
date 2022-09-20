@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 
-const App = ({ state, addPost, updatePost }) => {
+const App = ({ state, dispatch }) => {
   return (
     <div className="app-wrapper">
       <Header />
@@ -19,11 +19,7 @@ const App = ({ state, addPost, updatePost }) => {
           <Route
             path="/profile"
             element={
-              <Profile
-                postsData={state.profilePage}
-                addPost={addPost}
-                updatePost={updatePost}
-              />
+              <Profile postsData={state.profilePage} dispatch={dispatch} />
             }
           />
         </Routes>

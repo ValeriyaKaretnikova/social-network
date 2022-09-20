@@ -2,15 +2,18 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = ({ postsData, addPost, newPostText, updatePost }) => {
+const MyPosts = ({ postsData, newPostText, dispatch }) => {
   const newPostElement = React.createRef();
 
-  const add = () => {
-    addPost();
+  const addPost = () => {
+    dispatch({ type: "ADD-POST" });
   };
 
   const onPostChange = () => {
-    updatePost(newPostElement.current.value);
+    dispatch({
+      type: "UPDATE-NEW-POST-TEXT",
+      newText: newPostElement.current.value,
+    });
   };
 
   return (
@@ -25,7 +28,7 @@ const MyPosts = ({ postsData, addPost, newPostText, updatePost }) => {
           />
         </div>
         <div>
-          <button onClick={add}>Add post</button>
+          <button onClick={addPost}>Add post</button>
         </div>
       </div>
       <div className={s.posts}>
