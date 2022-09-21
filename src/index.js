@@ -8,18 +8,18 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-let renderEntireTree = (state) =>
+let renderEntireTree = () =>
   root.render(
     <BrowserRouter>
-      <App state={state} dispatch={store.dispatch.bind(store)} />
+      <App store={store} />
     </BrowserRouter>
   );
 
 renderEntireTree(store.getState());
 
 store.subscribe(() => {
-  let state = store.getState();
-  renderEntireTree(state);
+  //let state = store.getState();
+  renderEntireTree();
 });
 
 // If you want to start measuring performance in your app, pass a function

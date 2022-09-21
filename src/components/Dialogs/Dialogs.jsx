@@ -1,12 +1,8 @@
-import {
-  sendMessageCreator,
-  updateNewMessageCreator,
-} from "../../redux/dialogs-reducer";
 import DialogItem from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
 import Message from "./Message/Message";
 
-const Dialogs = ({ dialogsData, dispatch }) => {
+const Dialogs = ({ dialogsData, updateNewMessage, sendMessage }) => {
   const dialogs = dialogsData.dialogs.map((d) => {
     return <DialogItem name={d.name} id={d.id} image={d.image} key={d.id} />;
   });
@@ -17,12 +13,12 @@ const Dialogs = ({ dialogsData, dispatch }) => {
 
   const newMessageText = dialogsData.newMessageText;
   const onSendMessageClick = () => {
-    dispatch(sendMessageCreator());
+    sendMessage();
   };
 
   const onNewMessageChange = (e) => {
     const text = e.target.value;
-    dispatch(updateNewMessageCreator(text));
+    updateNewMessage(text);
   };
 
   return (
