@@ -5,20 +5,22 @@ import App from "./App";
 import "./index.css";
 import store from "./redux/redux-store";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "./StoreContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 let renderEntireTree = () =>
   root.render(
     <BrowserRouter>
-      <App store={store} />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </BrowserRouter>
   );
 
 renderEntireTree(store.getState());
 
 store.subscribe(() => {
-  //let state = store.getState();
   renderEntireTree();
 });
 
