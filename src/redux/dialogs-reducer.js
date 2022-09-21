@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
 const SEND_MESSAGE = "SEND-MESSAGE";
 
@@ -63,7 +65,7 @@ const dialogsReducer = (state = initialState, action) => {
       const body = state.newMessageText;
       state.newMessageText = "";
       const newMessage = {
-        id: 5,
+        id: uuidv4(),
         message: body,
       };
       state.messages.push(newMessage);
