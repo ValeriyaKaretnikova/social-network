@@ -8,11 +8,11 @@ import Message from "./Message/Message";
 
 const Dialogs = ({ dialogsData, dispatch }) => {
   const dialogs = dialogsData.dialogs.map((d) => {
-    return <DialogItem name={d.name} id={d.id} image={d.image} />;
+    return <DialogItem name={d.name} id={d.id} image={d.image} key={d.id} />;
   });
 
   const messages = dialogsData.messages.map((m) => {
-    return <Message message={m.message} />;
+    return <Message message={m.message} key={m.id} />;
   });
 
   const newMessageText = dialogsData.newMessageText;

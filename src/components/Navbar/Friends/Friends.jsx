@@ -7,7 +7,7 @@ const Friends = ({ data }) => {
       <h3>Friends</h3>
       <div className={s.wrapper}>
         {data.friends.map((friend) => {
-          return <Friend friend={friend} />;
+          return <Friend friend={friend} key={friend.id} />;
         })}
       </div>
     </div>
