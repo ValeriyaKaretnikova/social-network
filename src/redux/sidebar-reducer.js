@@ -25,6 +25,11 @@ const initialState = {
       name: "Irina",
       picture: "ava8",
     },
+    {
+      id: 6,
+      name: "Dima",
+      picture: "ava9",
+    },
   ],
 };
 

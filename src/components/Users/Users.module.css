@@ -1,0 +1,38 @@
+.wrapper {
+    padding: 20px;
+}
+.user {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap:20px;
+    justify-content: flex-start;
+}
+
+.userPhoto img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.userPhoto button {
+    background-color: #f8bc24;
+    color: #FFFFFF;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.userPhoto button:hover {
+    background-color: #daa520;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+
+  .userInfo {
+    flex-basis: 30%;
+      border: 2px solid rgb(218, 165, 32, 0.5);
+      border-radius: 5px;
+      padding:10px;
+  }
