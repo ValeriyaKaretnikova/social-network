@@ -36,3 +36,13 @@
       border-radius: 5px;
       padding:10px;
   }
+  .selected {
+      font-weight: bold;
+  }
+  .pages span {
+      cursor: pointer;
+      margin-right: 5px;
+  }
+  .pages {
+      margin-bottom: 20px;
+  }
