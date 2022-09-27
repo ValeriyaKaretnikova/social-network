@@ -1,5 +1,20 @@
 .description {
     padding: 10px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.description img {
+    width:120px;
+    border-radius: 50%;
+}
+.description .about{
+    text-transform:capitalize;
+    font-style: italic;
+}
+.description .name{
+   text-transform: capitalize;
+   font-weight: bold;
 }
 
 img {
