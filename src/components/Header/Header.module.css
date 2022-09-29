@@ -1,8 +1,21 @@
 .header {
   grid-area: h;
   background-color: #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header img {
   width: 100px;
+}
+
+.loginContainer {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.loginContainer a {
+  text-decoration: none;
+  color: #ffffff;
 }
