@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { usersAPI } from "../api/api";
 
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
@@ -63,5 +64,12 @@ export const setUserProfile = (profile) => ({
   type: SET_USER_PROFILE,
   profile,
 });
+export const getUser = (userId) => {
+  return (dispatch) => {
+    usersAPI.getUser(userId).then((response) => {
+      dispatch(setUserProfile(response));
+    });
+  };
+};
 
 export default profileReducer;

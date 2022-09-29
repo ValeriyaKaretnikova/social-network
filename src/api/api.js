@@ -14,9 +14,6 @@ export const usersAPI = {
       .get(`users?page=${currentPage}&count=${pageSize}`)
       .then((response) => response.data);
   },
-  authorizeMe() {
-    return instance.get(`auth/me`).then((response) => response.data);
-  },
   follow(userId) {
     return instance.post(`follow/${userId}`).then((response) => response.data);
   },
@@ -24,5 +21,14 @@ export const usersAPI = {
     return instance
       .delete(`follow/${userId}`)
       .then((response) => response.data);
+  },
+  getUser(userId) {
+    return instance.get(`profile/${userId}`).then((response) => response.data);
+  },
+};
+
+export const authAPI = {
+  authorizeMe() {
+    return instance.get(`auth/me`).then((response) => response.data);
   },
 };
