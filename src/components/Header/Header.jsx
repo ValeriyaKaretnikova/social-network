@@ -4,7 +4,7 @@ import s from "./Header.module.css";
 const Header = (props) => {
   return (
     <header className={s.header}>
-      <img src={require("../../img/logo.png")} alt="company logo" />
+      <img src={require("../../img/logo4.png")} alt="company logo" />
 
       <div className={s.loginContainer}>
         {props.isAuth ? props.login : <NavLink to={"/login"}>Login</NavLink>}

@@ -10,7 +10,7 @@
     width: 1000px;
     height: 150px;
     border: none;
-    box-shadow: rgba(241, 85, 67, 0.7) 0px 0px 0px 3px;
+    box-shadow: #D94A4Ab3 0px 0px 0px 3px;
     margin-bottom: 20px;
     resize: none;
     border-radius: 2px;
@@ -25,7 +25,7 @@
 }
 
 .postsBlock button {
-    background-color: #F15543;
+    background-color: #D94A4A;
     color: #FFFFFF;
     border: none;
     width: 150px;
@@ -36,7 +36,7 @@
 }
 
 .postsBlock button:hover {
-    background-color: #dd4d3d;
+    background-color: #c64343;
     transition: all 0.2s ease;
     cursor: pointer;
 }

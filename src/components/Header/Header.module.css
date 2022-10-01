@@ -1,6 +1,6 @@
 .header {
   grid-area: h;
-  background-color: #1A1A1A;
+  background-color: #040C0D;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +8,7 @@
 
 .header img {
   width: 100px;
+  margin-left: 20px;
 }
 
 .loginContainer {
