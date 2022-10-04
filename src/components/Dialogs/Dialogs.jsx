@@ -1,8 +1,9 @@
+import { Navigate } from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
 import Message from "./Message/Message";
 
-const Dialogs = ({ dialogsData, updateNewMessage, sendMessage }) => {
+const Dialogs = ({ dialogsData, updateNewMessage, sendMessage, isAuth }) => {
   const dialogs = dialogsData.dialogs.map((d) => {
     return <DialogItem name={d.name} id={d.id} image={d.image} key={d.id} />;
   });
@@ -20,6 +21,8 @@ const Dialogs = ({ dialogsData, updateNewMessage, sendMessage }) => {
     const text = e.target.value;
     updateNewMessage(text);
   };
+
+  if (!isAuth) return <Navigate replace to="/login" />;
 
   return (
     <div className={s.dialogs}>
