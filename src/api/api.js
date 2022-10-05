@@ -23,12 +23,29 @@ export const usersAPI = {
       .then((response) => response.data);
   },
   getUser(userId) {
-    return instance.get(`profile/${userId}`).then((response) => response.data);
+    console.warn("Please use ProfileAPI");
+    return profileAPI.getUser(userId);
   },
 };
 
 export const authAPI = {
   authorizeMe() {
     return instance.get(`auth/me`).then((response) => response.data);
+  },
+};
+
+export const profileAPI = {
+  getUser(userId) {
+    return instance.get(`profile/${userId}`).then((response) => response.data);
+  },
+  getStatus(userId) {
+    return instance
+      .get(`profile/status/${userId}`)
+      .then((response) => response.data);
+  },
+  updateStatus(status) {
+    return instance
+      .put(`profile/status`, { status: status })
+      .then((response) => response.data);
   },
 };

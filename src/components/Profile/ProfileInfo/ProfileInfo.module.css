@@ -10,7 +10,7 @@
 }
 .description .about{
     text-transform:capitalize;
-    font-style: italic;
+    
 }
 .description .name{
    text-transform: capitalize;
@@ -28,5 +28,6 @@ img {
     height: 500px;
 }
 .status {
-    padding: 10px;
+    padding: 5px 10px;
+    font-style: italic;
 }
