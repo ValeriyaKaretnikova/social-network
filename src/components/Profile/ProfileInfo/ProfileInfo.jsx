@@ -1,4 +1,5 @@
 import Preloader from "../../common/Preloader/Preloader";
+import background from "./../../../img/sunback.jpg";
 import userPhoto from "./../../../img/user.jpg";
 import s from "./ProfileInfo.module.css";
 import ProfileStatus from "./ProfileStatus";
@@ -9,7 +10,9 @@ const ProfileInfo = (props) => {
   }
   return (
     <div>
-      <div className={s.background}></div>
+      <div className={s.background}>
+        <img src={background} alt="background" />
+      </div>
       <div className={s.description}>
         <div>
           <img

@@ -33,6 +33,7 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .postsBlock button:hover {

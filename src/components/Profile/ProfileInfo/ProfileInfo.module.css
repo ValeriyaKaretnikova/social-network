@@ -18,15 +18,12 @@
    margin-bottom: 10px;
 }
 
-img {
-    width: 1200px;
+.background img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
-.background {
-    background: url('../../../img/sunback.jpg');
-    background-size:cover;
-    background-position:center;
-    height: 500px;
-}
+
 .status {
     padding: 5px 10px;
     font-style: italic;

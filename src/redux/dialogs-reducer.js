@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
 
-const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
 const SEND_MESSAGE = "SEND-MESSAGE";
 
 const initialState = {
@@ -54,25 +53,17 @@ const initialState = {
       image: "ava6",
     },
   ],
-  newMessageText: "",
 };
 const dialogsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_NEW_MESSAGE_TEXT: {
-      return {
-        ...state,
-        newMessageText: action.newText,
-      };
-    }
     case SEND_MESSAGE: {
-      const body = state.newMessageText;
+      const body = action.newMessageBody;
       const newMessage = {
         id: uuidv4(),
         message: body,
       };
       return {
         ...state,
-        newMessageText: "",
         messages: [...state.messages, newMessage],
       };
     }
@@ -81,10 +72,9 @@ const dialogsReducer = (state = initialState, action) => {
   }
 };
 
-export const sendMessageCreator = () => ({ type: SEND_MESSAGE });
-export const updateNewMessageCreator = (text) => ({
-  type: UPDATE_NEW_MESSAGE_TEXT,
-  newText: text,
+export const sendMessageCreator = (newMessageBody) => ({
+  type: SEND_MESSAGE,
+  newMessageBody,
 });
 
 export default dialogsReducer;
