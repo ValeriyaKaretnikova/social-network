@@ -7,7 +7,16 @@ const Header = (props) => {
       <img src={require("../../img/logo4.png")} alt="company logo" />
 
       <div className={s.loginContainer}>
-        {props.isAuth ? props.login : <NavLink to={"/login"}>Login</NavLink>}
+        {props.isAuth ? (
+          <div>
+            {props.login}
+            <button className={s.bLogout} onClick={props.logout}>
+              Log Out
+            </button>
+          </div>
+        ) : (
+          <NavLink to={"/login"}>Login</NavLink>
+        )}
       </div>
     </header>
   );
