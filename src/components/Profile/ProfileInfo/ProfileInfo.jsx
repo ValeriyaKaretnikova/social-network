@@ -2,7 +2,7 @@ import Preloader from "../../common/Preloader/Preloader";
 import background from "./../../../img/sunback.jpg";
 import userPhoto from "./../../../img/user.jpg";
 import s from "./ProfileInfo.module.css";
-import ProfileStatus from "./ProfileStatus";
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
   if (!props.profile) {
@@ -29,7 +29,10 @@ const ProfileInfo = (props) => {
           <div className={s.about}>{props.profile.aboutMe}</div>
         </div>
       </div>
-      <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+      <ProfileStatusWithHooks
+        status={props.status}
+        updateStatus={props.updateStatus}
+      />
     </div>
   );
 };

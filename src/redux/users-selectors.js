@@ -1,4 +1,4 @@
-export const getUsers = (state) => {
+export const requestUsers = (state) => {
   return state.usersPage.users;
 };
 
