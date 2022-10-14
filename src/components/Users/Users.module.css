@@ -44,18 +44,3 @@
     padding: 10px;
 }
 
-.selected {
-    font-weight: bold;
-}
-
-.pages span {
-    cursor: pointer;
-    margin-right: 5px;
-    font-size: 10px;
-}
-
-.pages {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}

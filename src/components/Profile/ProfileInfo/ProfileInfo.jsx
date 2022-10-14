@@ -4,8 +4,8 @@ import userPhoto from "./../../../img/user.jpg";
 import s from "./ProfileInfo.module.css";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (props) => {
-  if (!props.profile) {
+const ProfileInfo = ({ profile, status, updateStatus }) => {
+  if (!profile) {
     return <Preloader />;
   }
   return (
@@ -17,22 +17,17 @@ const ProfileInfo = (props) => {
         <div>
           <img
             src={
-              props.profile.photos.large != null
-                ? props.profile.photos.large
-                : userPhoto
+              profile.photos.large != null ? profile.photos.large : userPhoto
             }
             alt="avatar"
           />
         </div>
         <div>
-          <div className={s.name}>{props.profile.fullName}</div>
-          <div className={s.about}>{props.profile.aboutMe}</div>
+          <div className={s.name}>{profile.fullName}</div>
+          <div className={s.about}>{profile.aboutMe}</div>
         </div>
       </div>
-      <ProfileStatusWithHooks
-        status={props.status}
-        updateStatus={props.updateStatus}
-      />
+      <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
     </div>
   );
 };

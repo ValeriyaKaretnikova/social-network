@@ -13,12 +13,14 @@ import Users from "./Users";
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.getUsers(this.props.currentPage, this.props.pageSize);
+    const { currentPage, pageSize } = this.props;
+    this.props.getUsers(currentPage, pageSize);
   }
 
   onPageChanged = (pageNumber) => {
+    const { pageSize } = this.props;
     this.props.setCurrentPage(pageNumber);
-    this.props.getUsers(pageNumber, this.props.pageSize);
+    this.props.getUsers(pageNumber, pageSize);
   };
 
   render() {
@@ -50,16 +52,6 @@ const mapStateToProps = (state) => {
     followingInProgress: state.usersPage.followingInProgress,
   };
 };
-// const mapStateToProps = (state) => {
-//   return {
-//     users: requestUsers(state),
-//     pageSize: getPageSize(state),
-//     totalCount: getTotalUseresCount(state),
-//     currentPage: getCurrentPage(state),
-//     isFetching: getIsFetching(state),
-//     followingInProgress: getFollowingInProgress(state),
-//   };
-// };
 
 export default compose(
   connect(mapStateToProps, {
