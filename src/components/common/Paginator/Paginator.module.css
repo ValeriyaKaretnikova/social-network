@@ -5,11 +5,26 @@
 .pages span {
     cursor: pointer;
     margin-right: 5px;
-    font-size: 10px;
+
 }
 
 .pages {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
+}
+.btnPaginator{
+    margin: 0 10px;
+    padding: 5px;
+    width: 80px;
+    border: none;
+    background-color: #F28444;
+    color: #f1f1f1;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.btnPaginator:hover {
+    background-color: #f06311;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
