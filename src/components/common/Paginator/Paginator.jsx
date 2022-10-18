@@ -33,8 +33,6 @@ const Paginator = ({
         </button>
       )}
 
-      {console.log(leftPortionPageNumber)}
-
       {pages
         .filter(
           (p) => p >= leftPortionPageNumber && p <= rightPortionPageNumber
