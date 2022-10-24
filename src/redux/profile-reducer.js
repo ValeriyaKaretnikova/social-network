@@ -110,6 +110,14 @@ export const savePhoto = (file) => async (dispatch) => {
   }
 };
 
+export const saveProfile = (profile) => async (dispatch, getState) => {
+  const userId = getState().auth.userId;
+  const response = await profileAPI.saveProfile(profile);
+  if (response.resultCode === 0) {
+    dispatch(getUser(userId));
+  }
+};
+
 export const deletePost = (postId) => ({
   type: DELETE_POST,
   postId,

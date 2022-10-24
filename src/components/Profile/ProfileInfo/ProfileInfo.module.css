@@ -1,24 +1,42 @@
 .description {
     padding: 10px;
     display: flex;
-    align-items: center;
-    gap: 20px;
+
 }
 
 .description img {
-    width: 120px;
+    width: 200px;
     border-radius: 50%;
 }
 
-.description .about {
-    text-transform: capitalize;
-
+.description .avatar {
+    text-align: center;
 }
 
+.description .profileData {
+    display: flex;
+    align-items: flex-start;   
+    gap: 40px;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.description .profileData .mainInfo>div{
+    margin-bottom: 18px;
+}
 .description .name {
     text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 10px;
+    font-size: larger;
+    
+}
+.description .mainInfo{
+    width: 230px;
+}
+.description .mainInfo b{
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 .background img {
@@ -28,7 +46,7 @@
 }
 
 .status {
-    padding: 5px 10px;
+    margin-top: 5px;
     font-style: italic;
 }
 
@@ -44,6 +62,63 @@
     height: 30px;
     font-size: 16px;
 }
-.photoLoader {
-    margin-top: 30px;
+
+.photoLoader input,
+.photoLoader button {
+    width: 150px;
 }
+.photoLoader button {
+    background-color: #03A6A6;
+    color: #FFFFFF;
+    border: none;
+    height: 30px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photoLoader button:hover {
+    background-color: #0396A6;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.photoLoader input::-webkit-file-upload-button {
+    visibility: hidden;
+    text-overflow: none;
+}
+.photoLoader input::before{
+    content: 'Select Image';
+    height: 20px;
+    text-align: center;
+    padding: 5px 0;
+    display: inline-block;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    width:148px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    background-color: #D94A4A;
+    color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: bold;
+
+ 
+}
+.photoLoader input:hover::before {
+    border-color: black;
+  }
+
+  .contacts>b{
+    font-size: larger;
+    
+  }
+  .contacts .contact {
+    margin: 7px 10px;
+  }
+  .c .contact {
+    margin: 6.5px 0;
+    width: 230px;
+  }

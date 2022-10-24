@@ -11,4 +11,16 @@
 .formControl.error span {
     color: red
 }
+.formControl input, 
+.formControl textarea {
+    padding: 5px;
+    width: 100%;
+    resize: vertical;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+.formControl input[type="checkbox"]{
+    padding: none;
+    width: auto;
+}
 
