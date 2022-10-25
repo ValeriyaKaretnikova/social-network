@@ -16,8 +16,9 @@
     height: 100px;
     border-radius: 50%;
 }
+
 .userPhoto>div:first-child {
-    height:100px;
+    height: 100px;
 }
 
 .userPhoto button {
@@ -44,10 +45,12 @@
     border-radius: 5px;
     padding: 10px;
 }
+
 .name {
     font-weight: 700;
     color: rgb(35, 35, 35);
 }
+
 .status {
     margin-top: 10px;
     font-style: italic;

@@ -2,9 +2,14 @@
     font-weight: bold;
 }
 
+.pageNumber {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .pages span {
     cursor: pointer;
     margin-right: 5px;
+    margin-top: 4px;
 
 }
 
@@ -13,7 +18,8 @@
     display: flex;
     flex-wrap: wrap;
 }
-.btnPaginator{
+
+.btnPaginator {
     margin: 0 10px;
     padding: 5px;
     width: 80px;
@@ -23,6 +29,7 @@
     border-radius: 3px;
     font-weight: bold;
 }
+
 .btnPaginator:hover {
     background-color: #f06311;
     transition: all 0.2s ease;

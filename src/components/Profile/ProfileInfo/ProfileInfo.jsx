@@ -44,7 +44,14 @@ const ProfileInfo = ({
             }
             alt="avatar"
           />
-          <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
+          {isOwner ? (
+            <ProfileStatusWithHooks
+              status={status}
+              updateStatus={updateStatus}
+            />
+          ) : (
+            <div className={s.status}>{status}</div>
+          )}
         </div>
 
         {editMode ? (

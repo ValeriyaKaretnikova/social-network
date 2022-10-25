@@ -22,8 +22,18 @@ const UsersContainer = React.lazy(() =>
 );
 
 class App extends Component {
+  catchAllUnhandledErrors = (reason, promise) => {
+    alert("Some error occured");
+  };
   componentDidMount() {
     this.props.initializeApp();
+    window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+  }
+  componentWillUnmount() {
+    window.removeEventListener(
+      "unhandledrejection",
+      this.catchAllUnhandledErrors
+    );
   }
 
   render() {
@@ -36,6 +46,15 @@ class App extends Component {
         <Navbar />
         <div className="app-wrapper-content">
           <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Preloader />}>
+                  <ProfileContainer />
+                </Suspense>
+              }
+            />
+
             <Route
               path="/profile"
               element={
@@ -75,7 +94,7 @@ class App extends Component {
             <Route
               path="*"
               element={
-                <div>
+                <div className="">
                   <h2>404 Page not found</h2>
                 </div>
               }

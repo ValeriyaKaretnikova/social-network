@@ -15,25 +15,28 @@
 
 .description .profileData {
     display: flex;
-    align-items: flex-start;   
+    align-items: flex-start;
     gap: 40px;
     height: 100%;
     margin: 0 20px;
 }
 
-.description .profileData .mainInfo>div{
+.description .profileData .mainInfo>div {
     margin-bottom: 18px;
 }
+
 .description .name {
     font-weight: bold;
     margin-bottom: 10px;
     font-size: larger;
-    
+
 }
-.description .mainInfo{
+
+.description .mainInfo {
     width: 230px;
 }
-.description .mainInfo b{
+
+.description .mainInfo b {
     display: inline-block;
     margin-bottom: 5px;
 }
@@ -47,6 +50,9 @@
 .status {
     margin-top: 5px;
     font-style: italic;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .statusInput {
@@ -62,6 +68,7 @@
 .photoLoader button {
     width: 150px;
 }
+
 .photoLoader button {
     background-color: #03A6A6;
     color: #FFFFFF;
@@ -76,11 +83,13 @@
     transition: all 0.2s ease;
     cursor: pointer;
 }
+
 .photoLoader input::-webkit-file-upload-button {
     visibility: hidden;
     text-overflow: none;
 }
-.photoLoader input::before{
+
+.photoLoader input::before {
     content: 'Select Image';
     height: 20px;
     text-align: center;
@@ -88,32 +97,36 @@
     display: inline-block;
     font-weight: bold;
     border-radius: 4px;
-    width:150px;
+    width: 150px;
     outline: none;
     white-space: nowrap;
     cursor: pointer;
     background-color: #D94A4A;
     color: #FFFFFF;
     font-weight: bold;
- 
+
 }
+
 .photoLoader input:hover::before {
     border-color: black;
-  }
+}
 
-  .contacts>b{
+.contacts>b {
     font-size: larger;
-    
-  }
-  .contacts .contact {
+
+}
+
+.contacts .contact {
     color: rgb(53, 53, 53);
     margin: 8px 10px;
-  }
-  .c .contact {
+}
+
+.c .contact {
     margin: 6.5px 0;
     width: 230px;
-  }
-  .error {
+}
+
+.error {
     border: 1px solid red;
     border-radius: 4px;
     padding: 5px;
@@ -121,5 +134,5 @@
     font-size: small;
     position: absolute;
     width: 500px;
-   
+
 }
