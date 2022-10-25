@@ -25,7 +25,6 @@
     margin-bottom: 18px;
 }
 .description .name {
-    text-transform: capitalize;
     font-weight: bold;
     margin-bottom: 10px;
     font-size: larger;
@@ -57,10 +56,6 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    width: 500px;
-    height: 30px;
-    font-size: 16px;
 }
 
 .photoLoader input,
@@ -73,9 +68,7 @@
     border: none;
     height: 30px;
     border-radius: 4px;
-    text-transform: uppercase;
     font-weight: bold;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .photoLoader button:hover {
@@ -91,20 +84,17 @@
     content: 'Select Image';
     height: 20px;
     text-align: center;
-    padding: 5px 0;
+    padding: 6px 0;
     display: inline-block;
     font-weight: bold;
-    border: none;
     border-radius: 4px;
-    width:148px;
+    width:150px;
     outline: none;
     white-space: nowrap;
     cursor: pointer;
     background-color: #D94A4A;
     color: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-weight: bold;
-
  
 }
 .photoLoader input:hover::before {
@@ -116,9 +106,20 @@
     
   }
   .contacts .contact {
-    margin: 7px 10px;
+    color: rgb(53, 53, 53);
+    margin: 8px 10px;
   }
   .c .contact {
     margin: 6.5px 0;
     width: 230px;
   }
+  .error {
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 5px;
+    color: red;
+    font-size: small;
+    position: absolute;
+    width: 500px;
+   
+}

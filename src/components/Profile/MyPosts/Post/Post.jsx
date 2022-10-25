@@ -1,12 +1,15 @@
 import s from "./Post.module.css";
 
-const Post = ({message, likeCounts}) => {
+const Post = ({ message, likeCounts }) => {
   return (
     <div className={s.item}>
-      <img src={require("../../../../img/avatar.jpg")} alt="avatar" />
-      {message}
+      <div className={s.message}>
+        <img src={require("../../../../img/back.jpg")} alt="avatar" />
+        <div className={s.text}>{message}</div>
+      </div>
+
       <div>
-        <span>like</span> {likeCounts}
+        <span>❤️</span> {likeCounts}
       </div>
     </div>
   );

@@ -1,7 +1,13 @@
 .item {
-    color: green;
+    color: rgb(35, 35, 35);
+    margin-bottom: 30px;
 }
 .item img{
     width: 50px;
     border-radius: 50%;
+}
+.message {
+    display: flex;
+    gap:10px;
+    align-items: center;
 }

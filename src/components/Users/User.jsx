@@ -39,12 +39,10 @@ const User = ({ user, follow, unfollow, followingInProgress, ...props }) => {
 
       <div className={s.userInfo}>
         <span>
-          <div>{user.name}</div>
-          <div>{user.status}</div>
+          <div className={s.name}>{user.name}</div>
         </span>
         <span>
-          <div>country</div>
-          <div>city</div>
+          <div className={s.status}>{user.status}</div>
         </span>
       </div>
     </div>

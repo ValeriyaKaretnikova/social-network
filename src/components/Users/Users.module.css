@@ -44,4 +44,12 @@
     border-radius: 5px;
     padding: 10px;
 }
-
+.name {
+    font-weight: 700;
+    color: rgb(35, 35, 35);
+}
+.status {
+    margin-top: 10px;
+    font-style: italic;
+    color: grey;
+}

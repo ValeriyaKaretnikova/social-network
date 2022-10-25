@@ -27,8 +27,9 @@ const ProfileInfo = ({
   };
 
   const onSaveProfile = (formData) => {
-    saveProfile(formData);
-    setEditMode(false);
+    saveProfile(formData).then(() => {
+      setEditMode(false);
+    });
   };
   return (
     <div>
@@ -111,7 +112,7 @@ const ProfileData = ({ profile, isOwner, onPhotoSelected, goToEditMode }) => {
 export const Contact = ({ contactTitle, contactValue }) => {
   return (
     <div className={s.contact}>
-      <b>{contactTitle}:</b>
+      <b>{contactTitle}: </b>
       {contactValue}
     </div>
   );

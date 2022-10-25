@@ -2,7 +2,7 @@ import { Field, reduxForm } from "redux-form";
 import { Input, Textarea } from "../../common/FormControls/FormControls";
 import s from "./ProfileInfo.module.css";
 
-const ProfileDataForm = ({ handleSubmit, profile }) => {
+const ProfileDataForm = ({ handleSubmit, profile, error }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className={s.profileData}>
@@ -47,6 +47,7 @@ const ProfileDataForm = ({ handleSubmit, profile }) => {
           <div className={s.photoLoader}>
             <button onClick={() => {}}>Save</button>
           </div>
+          {error && <span className={s.error}>{error}</span>}
         </div>
         <div className={s.c}>
           <b>Contacts: </b>
