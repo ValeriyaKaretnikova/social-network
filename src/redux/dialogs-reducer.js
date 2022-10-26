@@ -24,7 +24,7 @@ const initialState = {
   dialogs: [
     {
       id: 1,
-      name: "Masha",
+      name: "Maria",
       image: "ava1",
     },
     {
@@ -34,22 +34,22 @@ const initialState = {
     },
     {
       id: 3,
-      name: "Sveta",
+      name: "Sarah",
       image: "ava4",
     },
     {
       id: 4,
-      name: "Valera",
+      name: "William",
       image: "ava3",
     },
     {
       id: 5,
-      name: "Alena",
+      name: "Anna",
       image: "ava5",
     },
     {
       id: 6,
-      name: "Dima",
+      name: "David",
       image: "ava6",
     },
   ],

@@ -2,7 +2,7 @@ const initialState = {
   friends: [
     {
       id: 1,
-      name: "Masha",
+      name: "Maria",
       picture: "ava1",
     },
     {
@@ -12,22 +12,22 @@ const initialState = {
     },
     {
       id: 3,
-      name: "Sveta",
+      name: "Sarah",
       picture: "ava4",
     },
     {
       id: 4,
-      name: "Viktor",
+      name: "Victor",
       picture: "ava7",
     },
     {
       id: 5,
-      name: "Irina",
+      name: "Irene",
       picture: "ava8",
     },
     {
       id: 6,
-      name: "Dima",
+      name: "David",
       picture: "ava9",
     },
   ],
