@@ -2,6 +2,17 @@ import { v4 as uuidv4 } from "uuid";
 
 const SEND_MESSAGE = "SEND-MESSAGE";
 
+type DialogType = {
+  id: number
+  name: string
+  image: string
+}
+
+type MessageType = {
+  id: number
+  message: string
+}
+
 const initialState = {
   messages: [
     {
@@ -20,7 +31,7 @@ const initialState = {
       id: 4,
       message: "Yo!",
     },
-  ],
+  ] as Array<MessageType>,
   dialogs: [
     {
       id: 1,
@@ -52,9 +63,12 @@ const initialState = {
       name: "David",
       image: "ava6",
     },
-  ],
+  ] as Array<DialogType>,
 };
-const dialogsReducer = (state = initialState, action) => {
+
+export type InitialStateType = typeof initialState
+
+const dialogsReducer = (state = initialState, action: any): InitialStateType => {
   switch (action.type) {
     case SEND_MESSAGE: {
       const body = action.newMessageBody;
@@ -72,7 +86,12 @@ const dialogsReducer = (state = initialState, action) => {
   }
 };
 
-export const sendMessageCreator = (newMessageBody) => ({
+type SendMessageCreatorActionType = {
+  type: typeof SEND_MESSAGE
+  newMessageBody: string
+}
+
+export const sendMessageCreator = (newMessageBody : string) : SendMessageCreatorActionType => ({
   type: SEND_MESSAGE,
   newMessageBody,
 });

@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Navigate } from "react-router";
 import { Field, reduxForm } from "redux-form";
-import { login } from "../../redux/auth-reducer";
+import { login } from "../../redux/auth-reducer.ts";
 import { required } from "../../utils/validators/validators";
 import { Input } from "../common/FormControls/FormControls";
 import logo from "./../../img/logo5.png";

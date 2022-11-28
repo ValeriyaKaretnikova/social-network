@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addPostCreator } from "../../../redux/profile-reducer";
+import { addPostCreator } from "../../../redux/profile-reducer.ts";
 import MyPosts from "./MyPosts";
 
 const mapStateToProps = (state) => {

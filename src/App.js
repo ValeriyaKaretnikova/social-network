@@ -8,7 +8,7 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import Navbar from "./components/Navbar/Navbar";
 import { withRouter } from "./hoc/withRouter";
-import { initializeApp } from "./redux/app-reducer";
+import { initializeApp } from "./redux/app-reducer.ts";
 import store from "./redux/redux-store";
 
 const DialogsContainer = React.lazy(() =>
