@@ -5,8 +5,8 @@ import appReducer from "./app-reducer.ts";
 import authReducer from "./auth-reducer.ts";
 import dialogsReducer from "./dialogs-reducer.ts";
 import profileReducer from "./profile-reducer.ts";
-import sidebarReducer from "./sidebar-reducer";
-import usersReducer from "./users-reducer";
+import sidebarReducer from "./sidebar-reducer.ts";
+import usersReducer from "./users-reducer.ts";
 
 const reducers = combineReducers({
   profilePage: profileReducer,

@@ -1,17 +1,8 @@
 import { stopSubmit } from "redux-form";
 import { authAPI, securityAPI } from "../api/api";
 
-
 const SET_USER_DATA = "auth/SET_USER_DATA";
 const GET_CAPTCHA_URL_SUCCESS = "auth/GET_CAPTCHA_URL_SUCCESS";
-
-// type InitialStateType2 = {
-//   userId: number | null
-//   email: string | null
-//   login: string | null
-//   isAuth: boolean
-//   captchaUrl: string | null
-// }
 
 const initialState = {
   userId: null as number | null,
