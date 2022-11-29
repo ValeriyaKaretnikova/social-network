@@ -34,5 +34,6 @@ In each lesson, we implemented a concept into this project. Many of the concepts
 * React Routing
 * Forms in React
 * Unit Testing
+* TypeScript
 
 ***

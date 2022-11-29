@@ -8,7 +8,7 @@ import profileReducer from "./profile-reducer.ts";
 import sidebarReducer from "./sidebar-reducer.ts";
 import usersReducer from "./users-reducer.ts";
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
   sidebar: sidebarReducer,
@@ -18,8 +18,11 @@ const reducers = combineReducers({
   app: appReducer,
 });
 
-const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+type RootReducerType = typeof rootReducer
+export type AppStateType = ReturnType<RootReducerType>
 
+const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+// @ts-ignore
 window.store = store;
 
 export default store;
