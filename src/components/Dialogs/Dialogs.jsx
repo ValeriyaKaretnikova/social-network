@@ -1,6 +1,9 @@
 import { Field, reduxForm } from "redux-form";
-import { maxLengthCreator, required } from "../../utils/validators/validators";
-import { Textarea } from "../common/FormControls/FormControls";
+import {
+  maxLengthCreator,
+  required,
+} from "../../utils/validators/validators.ts";
+import { Textarea } from "../common/FormControls/FormControls.tsx";
 import DialogItem from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
 import Message from "./Message/Message";

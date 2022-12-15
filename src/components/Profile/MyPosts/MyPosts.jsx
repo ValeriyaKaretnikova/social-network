@@ -3,8 +3,8 @@ import { Field, reduxForm } from "redux-form";
 import {
   maxLengthCreator,
   required,
-} from "../../../utils/validators/validators";
-import { Textarea } from "../../common/FormControls/FormControls";
+} from "../../../utils/validators/validators.ts";
+import { Textarea } from "../../common/FormControls/FormControls.tsx";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 

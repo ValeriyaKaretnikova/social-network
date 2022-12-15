@@ -1,5 +1,5 @@
 import { Field, reduxForm } from "redux-form";
-import { Input, Textarea } from "../../common/FormControls/FormControls";
+import { Input, Textarea } from "../../common/FormControls/FormControls.tsx";
 import s from "./ProfileInfo.module.css";
 
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {

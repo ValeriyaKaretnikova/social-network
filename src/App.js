@@ -5,7 +5,7 @@ import { compose } from "redux";
 import "./App.css";
 import Preloader from "./components/common/Preloader/Preloader";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import Login from "./components/Login/Login";
+import Login from "./components/Login/Login.tsx";
 import Navbar from "./components/Navbar/Navbar";
 import { withRouter } from "./hoc/withRouter";
 import { initializeApp } from "./redux/app-reducer.ts";
